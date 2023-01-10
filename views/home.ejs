@@ -1,0 +1,58 @@
+<%- include("partials/header");-%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ONE-STOP</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <p class="navbar-brand" id="title">One-Stop</p>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="home"><a href="/">HOME</a></li>
+            <li id="about"><a href="/about">ABOUT US</a></li>
+            <li id="contact"><a href="/contact">CONTACT US</a></li>
+          </ul>
+      </div>
+    </nav>
+    <nav class="row-color nav navbar-default">
+        <ul class=" row nav navbar-nav ">
+            <li  href="#"><a class="job">Job Opportunities</a></li>
+            <li class="" href="#"><a>Contests</a></li>
+            <li class="" href="#"><a>Hackathons</a></li>
+            <li class="" href="#"><a>Others</a></li>
+    
+        </ul>
+    
+    </nav>
+<div class="container">
+
+
+<!-- <h1>ALL OPENINGS</h1> -->
+<!-- <p><%= startingContent %></p> -->
+<!-- <div class="row"> -->
+    
+<!-- </div> -->
+
+
+<% allPosts.forEach(function(post){ %>
+    <h1><%= post.title %></h1>
+    
+    <h4><%= post.datentime%></h4>
+    <a href=" <%= post.link %> ">Link to Apply</a>
+    <p><%= post.body.substring(0,100) %> <a href="/posts/<%=post._id%>">Read More</a></p>
+
+<% }); %>
+
+
+<!-- <%- include("partials/footer");-%> -->
