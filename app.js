@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const ejs = require('ejs');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -54,6 +53,10 @@ app.get('/contact', function (req, res) {
 
 app.get('/login', function (req, res) {
     res.render('login');
+});
+
+app.get('/signup', function (req, res) {
+    res.render('signup');
 });
 
 app.get('/posts', function (req, res) {
